@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stars in Graz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<!--header section-->
+<div class="scroll-observer"></div>
+<header class="full-width">
+    <h1 class="logo">Stars in Graz</h1>
+    <!--navigation-->
+    <nav>
+        <ul>
+            <li>
+                <a href="#artists">Artists</a>
+            </li>
+            <li>
+                <a href="#schedule">Schedule</a>
+            </li>
+            <li>
+                <a href="#testimony">Testimony</a>
+            </li>
+            <li>
+                <a href="#faq" title="Frequently asked questions" aria-label="Frequently asked questions">FaQ</a>
+            </li>
+            <li>
+                <a class="buy-ticket-button" href="#">Buy Tickets!</a>
+            </li>
+        </ul>
+    </nav>
+    <!--hamburger button-->
+    <button class="menu-button" aria-label="Open or close navigation" title="Toggle navigation">
+        <img src="./mediafiles/icon/menu.svg" alt="Hamburger icon" aria-hidden="true"/>
+    </button>
+</header>
+<!--content section-->
+<main>
+    <!--hero section-->
+    <section class="hero full-width">
+        <div class="hero-box">
+            <h2>Stars in Graz</h2>
+            <p>Have an unforgettable experience at
+                <span class="emphasized">30.10.2021</span>
+                in
+                <span class="emphasized">Messe Congress Graz</span>
+            </p>
+            <p>For more information come back at
+                <span class="emphasized">25.09.2021</span>
+            </p>
+        </div>
+    </section>
+    <!--artists section-->
+    <section class="artists full-width" id="artists">
+        <div class="inner-container">
+            <h2 class="section-title">Artists</h2>
+            <div class="artist-container">
+                <!--artist 1-->
+                <div class="artist-box">
+                    <div class="artist-header">
+                        <h3>Bilderbuch</h3>
+                    </div>
+                    <div class="artist-body">
+                        <div class="artist-description">
+                            <p>Bilderbuch is among the most successful Austrian rock bands and known for their Art Pop
+                                music.
+                            </p>
+                            <p>The band has released 6 albums.</p>
+                            <p>The two latest singles were released this year and are waiting to be performed in front
+                                of you!
+                            </p>
+                        </div>
+                        <div class="artist-image">
+                            <img src="./mediafiles/images/artists/bilderbuch.jpg" alt="An image of Bilderbuch">
+                        </div>
+                    </div>
+                </div>
+                <!--artist 2-->
+                <div class="artist-box">
+                    <div class="artist-header">
+                        <h3>Wanda</h3>
+                    </div>
+                    <div class="artist-body">
+                        <div class="artist-description">
+                            <p>Wanda is an Austrian indie pop band founded in Vienna in 2012.
+                            </p>
+                            <p>Their indie pop style is influenced by rock 'n' roll, as well as Austropop.</p>
+                            <p>They label their music as "pop music with 'Amore'".
+                            </p>
+                        </div>
+                        <div class="artist-image">
+                            <img src="./mediafiles/images/artists/wanda.jpg" alt="An image of Wanda">
+                        </div>
+                    </div>
+                </div>
+                <!--artist 3-->
+                <div class="artist-box">
+                    <div class="artist-header">
+                        <h3>Christina Stürmer</h3>
+                    </div>
+                    <div class="artist-body">
+                        <div class="artist-description">
+                            <p>Christina Stürmer is an Austrian singer and songwriter.
+                            </p>
+                            <p>With the release of her international debut album Schwarz Weiss, Stürmer became one of
+                                the biggest-selling Austrian artists to emerge in German-speaking Europe in the
+                                mid-2000s.
+                            </p>
+                            <p>Throughout a career spanning 15 years, Stürmer has sold over 2.0 million records.
+                            </p>
+                        </div>
+                        <div class="artist-image">
+                            <img src="./mediafiles/images/artists/christina-sturmer3.jpg"
+                                 alt="An image of Christina Stürmer">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--concert schedule-->
+    <section class="schedule" id="schedule">
+        <div class="inner-container">
+            <h2 class="section-title">Concert Schedule</h2>
+            <div class="schedule-container">
+                <div class="schedule-box">
+                    <span class="schedule-border"></span>
+                    <h3>17:00 Bilderbuch</h3>
+                </div>
+                <div class="schedule-box">
+                    <span class="schedule-border"></span>
+                    <h3>18:00 Wanda</h3>
+                </div>
+                <div class="schedule-box">
+                    <span class="schedule-border"></span>
+                    <h3>19:00 Christina Stürmer</h3>
+                </div>
+                <div class="schedule-box">
+                    <span class="schedule-border"></span>
+                    <h3>20:00 Volbeat</h3>
+                </div>
+                <div class="schedule-box">
+                    <span class="schedule-border"></span>
+                    <h3>21:00 Imagine Dragons</h3>
+                </div>
+                <div class="schedule-box">
+                    <span class="schedule-border"></span>
+                    <h3>22:00 Opus</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--buy ticket cta-->
+    <section class="ticket-cta full-width">
+        <div class="inner-container">
+            <h2 class="section-title">Purchase your ticket Now!</h2>
+            <h3>Don't miss out on this once-in-a-year opportunity!</h3>
+            <a href="#" class="buy-ticket-button">Buy Tickets!</a>
+        </div>
+    </section>
+    <!--testimony from previous visitors-->
+    <section class="testimony full-width" id="testimony">
+        <div class="inner-container">
+            <h2 class="section-title">Testimonials</h2>
+            <div class="testimonial-container">
+                <!--testimony 1-->
+                <div class="testimonial-box">
+                    <div class="testimonial-content">
+                        <p>The Stars in Graz Experience was nothing short of amazing.</p>
+                        <p>The joy from the stage was infectious.</p>
+                        <p>In all my years of booking concerts, none has caused a more emphatically enthusiastic
+                            response.
+                        </p>
+                        <p>It was off the charts!</p>
+                    </div>
+                    <span class="testimonial-author">
+                        - Bill Deasy
+                    </span>
+                </div>
+                <!--testimony 2-->
+                <div class="testimonial-box">
+                    <div class="testimonial-content">
+                        <p>Wow! Such a delightful fun evening last Saturday.</p>
+                        <p>The bands were excellent and the programme perfect!</p>
+                        <p>We’ll look forward to the next one.</p>
+                    </div>
+                    <span class="testimonial-author">- David Reaney</span>
+                </div>
+                <!--testimony 3-->
+                <div class="testimonial-box">
+                    <div class="testimonial-content">
+                        <p>Thanks again for another wonderful Stars in Graz!</p>
+                        <p>It really gets better every year.</p>
+                        <p>It is the best music festival in the world and I am glad I am a part of it.</p>
+                    </div>
+                    <span class="testimonial-author">- Mona Steinbauer</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--faq section-->
+    <section class="faq" id="faq">
+        <div class="inner-container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <!--faq 1-->
+                <div class="faq-box">
+                    <div class="faq-header">
+                        <button aria-label="Open faq box">+</button>
+                        <h3>What is Stars in Graz?</h3>
+                    </div>
+                    <div class="faq-content">
+                        <div class="faq-content-inner">
+                            <p>Stars in Graz is a one-day music concert where many different artists perform their most popular songs.</p>
+                            <p>It takes place once a year since 2015.</p>
+                        </div>
+                    </div>
+                </div>
+                <!--faq 2-->
+                <div class="faq-box">
+                    <div class="faq-header">
+                        <button aria-label="Toggle faq box">+</button>
+                        <h3>When does Stars in Graz take place?</h3>
+                    </div>
+                    <div class="faq-content">
+                        <div class="faq-content-inner">
+                            <p>On 30.10.2021.</p>
+                            <p>The first act starts at 17:00.</p>
+                        </div>
+                    </div>
+                </div>
+                <!--faq 3-->
+                <div class="faq-box">
+                    <div class="faq-header">
+                        <button aria-label="Toggle faq box">+</button>
+                        <h3>What is the age minimum?</h3>
+                    </div>
+                    <div class="faq-content">
+                        <div class="faq-content-inner">
+                            <p>Persons under 16 years of age are not allowed to enter without the accompaniment of an adult.</p>
+                        </div>
+                    </div>
+                </div>
+                <!--faq 4-->
+                <div class="faq-box">
+                    <div class="faq-header">
+                        <button aria-label="Toggle faq box">+</button>
+                        <h3>Can I pay by credit card?</h3>
+                    </div>
+                    <div class="faq-content">
+                        <div class="faq-content-inner">
+                            <p>Yes, credit cards can be used at all food stands.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--faq 5-->
+                <div class="faq-box">
+                    <div class="faq-header">
+                        <button aria-label="Toggle faq box">+</button>
+                        <h3>What is the golden circle?</h3>
+                    </div>
+                    <div class="faq-content">
+                        <div class="faq-content-inner">
+                            <p>In the Golden Circle, you experience your favorite act as close as possible.
+                            </p>
+                            <p>It is located directly in front of the stage.
+                            </p>
+                            <p>Show your Golden Circle ticket and you'll get to this area quickly and easily thanks to a separate entrance.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--faq 6-->
+                <div class="faq-box">
+                    <div class="faq-header">
+                        <button aria-label="Toggle faq box">+</button>
+                        <h3>Are there wheelchair spaces?</h3>
+                    </div>
+                    <div class="faq-content">
+                        <div class="faq-content-inner">
+                            <p>Of course, wheelchair spaces are available.
+                            </p>
+                            <p>However, spaces are limited. Please contact us in advance for more information.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--faq 7-->
+                <div class="faq-box">
+                    <div class="faq-header">
+                        <button aria-label="Toggle faq box">+</button>
+                        <h3>Can I resale my ticket if I cannot go?</h3>
+                    </div>
+                    <div class="faq-content">
+                        <div class="faq-content-inner">
+                            <p>The resale of the tickets is prohibited.
+                            </p>
+                            <p>For security reasons, we also strongly advise against buying the tickets from anyone.
+                            </p>
+                            <p>Anyone who tries to gain access to the event with copied or forged tickets will be suspected of ticket misuse and prosecuted.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<!--footer section-->
+<footer class="full-width">
+    <div class="inner-container">
+        <!--footer left-->
+        <div>
+            <span>Stars in Graz &copy; 2021</span>
+        </div>
+        <!--footer center-->
+        <div class="footer-center">
+            <p>See you at 25.09.2021!</p>
+        </div>
+        <!--footer right for social links-->
+        <div>
+            <ul class="social-links">
+                <li>
+                    <a href="#" aria-label="Facebook page">
+                        Facebook
+                    </a>
+                </li>
+                <li>
+                    <a href="#" aria-label="Twitter page">
+                        Instagram
+                    </a>
+                </li>
+                <li>
+                    <a href="#" aria-label="Twitter page">
+                        Twitter
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

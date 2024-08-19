@@ -1,0 +1,588 @@
+/*global styles*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 900px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+:root {
+    --body-width: 1440px;
+}
+
+body {
+    max-width: var(--body-width);
+    margin: 0 auto;
+    font-family: 'Roboto', 'Arial', sans-serif;
+}
+
+.full-width {
+    width: 100vw;
+    margin: 0 calc(-50vw + 50%);
+}
+
+.inner-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    max-width: var(--body-width);
+    margin-inline: auto;
+    margin-block: 1.5rem;
+    padding-inline: 1rem;
+}
+
+section:not(.hero) {
+    border: 1px solid transparent;
+    color: #1c1917;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.25rem;
+    margin-block: 1.5rem;
+}
+
+/*end of global styles*/
+
+/*header style*/
+header {
+    padding: 1.5rem 1.75rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+
+    transition: background-color 150ms ease;
+    color: #fafaf9;
+    text-align: center;
+
+    ul {
+        list-style-type: none;
+
+        display: flex;
+        gap: 1.25rem;
+        align-items: center;
+
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+    }
+
+    a {
+        transition: all 250ms ease-in-out;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    a:not(.buy-ticket-button):hover {
+        transition: all 250ms ease-in-out;
+        color: #e11d48;
+    }
+
+    .logo {
+        font-size: 2.25rem;
+        background-color: #e11d48;
+        color: #fafaf9;
+        border-radius: .5rem;
+        padding: .25rem 1.15rem;
+        letter-spacing: 5px;
+    }
+
+    .menu-button {
+        outline: 0;
+        border: 0;
+        background-color: #e11d48;
+        border-radius: .25rem;
+
+        width: 50px;
+        cursor: pointer;
+
+        display: none;
+    }
+}
+
+/*responsive header*/
+@media (max-width: 900px) {
+    header {
+        nav {
+            display: none;
+        }
+
+        nav.nav-visible {
+            display: block;
+            flex-basis: 100%;
+            order: 3;
+            background-color: #fafaf9;
+            color: #1c1917;
+            padding: 1rem;
+        }
+
+        .menu-button {
+            display: block;
+        }
+
+        ul {
+            flex-direction: column;
+            align-items: stretch;
+        }
+    }
+
+}
+
+.buy-ticket-button {
+    padding: .5rem 1.15rem;
+    background-color: #e11d48;
+    color: #fafaf9;
+    font-weight: bold;
+    text-align: center;
+    border-radius: .5rem;
+}
+
+.buy-ticket-button:hover {
+    background-color: #be123c;
+}
+
+/*style for header scrolled*/
+.header-scrolled {
+    color: #1c1917;
+    isolation: isolate;
+}
+
+.header-scrolled::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    background-color: #fafaf9;
+    z-index: -1;
+    animation: slide-in 300ms linear forwards;
+    transition: background-color 150ms ease;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateY(-200%);
+    }
+    to {
+        transform: translateY(0);
+        box-shadow: 0 0 .5rem .5rem #1c1917;
+    }
+}
+
+/*hero section*/
+.hero {
+    background-image: url("./mediafiles/images/concert/anthony-delanoix-hzgs56Ze49s-unsplash.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    isolation: isolate;
+
+    padding-inline: 1.75rem;
+}
+
+/*hero backdrop*/
+.hero::before {
+    content: '';
+
+    position: absolute;
+    inset: 0;
+    background-color: #1c191775;
+    z-index: -1;
+}
+
+/*hero section info box*/
+.hero-box {
+    display: grid;
+    place-items: center;
+    gap: 1rem;
+
+    text-align: center;
+    padding: 3rem;
+    background-color: #e11d48;
+    color: #fafaf9;
+    border-radius: .5rem;
+    font-size: 1.75rem;
+
+    h2 {
+        font-size: 2.25rem;
+    }
+
+    .emphasized {
+        font-weight: bold;
+        font-size: 2rem;
+        color: #1c1917;
+    }
+}
+
+/*artist section*/
+.artists {
+    background-color: #f5f5f4;
+}
+
+.artist-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+}
+
+.artist-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid #e2e8f0;
+    padding: 1rem;
+    border-radius: .5rem;
+
+    .artist-header {
+        font-size: 1.75rem;
+        color: #e11d48;
+    }
+
+    .artist-body {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 1.25rem;
+    }
+
+    .artist-description {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+        font-size: 1.5rem;
+        text-align: left;
+        letter-spacing: 1px;
+
+        grid-column: span 7;
+        max-width: 90%;
+    }
+
+    .artist-image {
+        grid-column: span 5;
+        box-shadow: 0 0 .5rem .1rem #1c1917;
+        rotate: -1deg;
+    }
+
+    &:nth-child(even) .artist-image{
+        rotate: 2deg;
+    }
+}
+
+.artist-box:nth-child(even) {
+    .artist-description {
+        order: 2;
+        text-align: right;
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 900px) {
+    .artist-box {
+        .artist-body {
+            display: flex;
+            flex-direction: column;
+
+            justify-items: center;
+            align-items: center;
+        }
+
+        .artist-description {
+            order: 1;
+            text-align: center !important;
+            margin: auto;
+            max-width: 100%;
+        }
+
+        .artist-image {
+            order: 2;
+            justify-self: center !important;
+            grid-column: span 1 / -1;
+        }
+    }
+}
+
+/*concert schedule section*/
+.schedule-container {
+    display: grid;
+    gap: 1rem;
+}
+
+.schedule-box {
+    display: grid;
+    grid-template-columns: 45% 1fr;
+
+    background-color: #f5f5f4;
+    border-radius: .5rem;
+    padding: 1rem 2rem;
+
+    width: 90%;
+    margin: 0 auto;
+}
+
+.schedule-box > * {
+    grid-column: span 1;
+}
+
+.schedule-box h3 {
+    padding-left: .5rem;
+    padding-block: .75rem;
+}
+
+.schedule-border {
+    border-left: .35rem solid #e11d48;
+    justify-self: end;
+}
+
+@media (max-width: 900px) {
+    .schedule-box {
+        display: flex;
+    }
+}
+
+/*buy ticket cta section*/
+section.ticket-cta {
+    background-color: #e11d48;
+    background-image: url("./mediafiles/images/concert/yvette-de-wit-NYrVisodQ2M-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+
+    border: 0;
+
+    color: #f5f5f4;
+    text-align: center;
+    padding-block: 3rem;
+
+    position: relative;
+    isolation: isolate;
+}
+
+/*cta backdrop*/
+section.ticket-cta::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .6);
+    z-index: -1;
+}
+
+section.ticket-cta h3{
+    font-size: 2rem;
+}
+
+.ticket-cta .buy-ticket-button {
+    background-color: #e11d48;
+    color: #f5f5f4;
+    font-size: 2rem;
+}
+
+.ticket-cta .buy-ticket-button:hover {
+    background-color: #e11d4870;
+}
+
+/*testimonial section*/
+.testimony {
+    background-color: #fafaf9;
+}
+
+.testimonial-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.testimonial-box {
+    font-size: 1.35rem;
+    padding: 2rem 2rem 2rem 4rem;
+    border: 1px solid #e2e8f0;
+    border-radius: .5rem;
+
+    position: relative;
+}
+
+.testimonial-box::before {
+    content: '"';
+    position: absolute;
+    top: 0;
+    left: 3%;
+    font-size: 7rem;
+    color: #e11d48;
+}
+
+.testimonial-box .testimonial-author {
+    display: block;
+    text-align: right;
+    font-weight: bold;
+    font-size: 1.75rem;
+    color: #e11d48;
+}
+
+.testimonial-box .testimonial-content {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    letter-spacing: 1px;
+    font-style: italic;
+}
+
+.testimonial-box:first-child {
+
+    align-self: center;
+    grid-column: 2;
+    grid-row: 1 / 3;
+}
+
+.testimonial-box:nth-child(2) {
+    justify-self: end;
+}
+
+.testimonial-box:nth-child(3) {
+    grid-column: 1;
+    justify-self: end;
+}
+
+@media (max-width: 900px) {
+    .testimonial-container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/*faq section*/
+.faq-container {
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.faq-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    border: 1px solid #e2e8f0;
+    padding: 1.5rem;
+}
+
+.faq-box:not(:last-child){
+    border-bottom: 0;
+}
+
+.faq-box .faq-header {
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    align-items: center;
+    gap: 1rem;
+}
+
+.faq-box .faq-header button {
+    color: #e11d48;
+    background: none;
+    border: 0;
+    font-size: 2.75rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.faq-box .faq-content {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 250ms;
+}
+
+.faq-box .faq-content .faq-content-inner {
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+
+    font-size: 1.15rem;
+}
+
+.faq-box .faq-content.faq-expanded {
+    grid-template-rows: 1fr;
+}
+
+/*footer section*/
+footer{
+    background-color: #e11d48;
+}
+
+footer .inner-container{
+    margin-block: 0;
+    padding-block: 3rem;
+    color: #e2e8f0;
+    font-size: 1.25rem;
+
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+@media(max-width: 900px){
+    footer .inner-container{
+        flex-direction: column;
+    }
+}
+
+footer .inner-container .social-links{
+    list-style-type: none;
+
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.social-links a:hover{
+    text-decoration: underline;
+}
+
+.footer-center{
+    font-style: italic;
+}
